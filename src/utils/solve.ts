@@ -7,4 +7,5 @@ export const solve = (inputSudoku: Sudoku): Sudoku => {
   }
 
   // TODO: Solve sudoku and return it
+  return [] as any;
 };

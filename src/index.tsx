@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import SolverForm from "./SolverForm/SolverForm";
+import SudokuSolver from "./SudokuSolver/SudokuSolver";
 
 ReactDOM.render(
   <React.StrictMode>
-    <SolverForm />
+    <SudokuSolver />
   </React.StrictMode>,
   document.getElementById("root")
 );
