@@ -3,44 +3,46 @@ import { Sudoku } from "../types";
 import { puzzle1, puzzle2, puzzle3 } from "../utils/data";
 
 interface SolverFormProps {
-  currentPuzzle?: Sudoku;
   setCurrentPuzzle: (sudoku: Sudoku) => void;
   handleSubmit: () => void;
 }
 
-function SolverForm({
-  // currentPuzzle,
-  setCurrentPuzzle,
-  handleSubmit,
-}: SolverFormProps) {
+function SolverForm({ setCurrentPuzzle, handleSubmit }: SolverFormProps) {
   return (
-    <form>
+    <form className="solver-form">
       <button
-        onClick={() => {
+        className="solver-form-set-puzzle-button"
+        onClick={(e) => {
+          e.preventDefault();
           setCurrentPuzzle(puzzle1);
         }}
       >
-        input puzzle 1
+        puzzle 1
       </button>
       <button
-        onClick={() => {
+        className="solver-form-set-puzzle-button"
+        onClick={(e) => {
+          e.preventDefault();
           setCurrentPuzzle(puzzle2);
         }}
       >
-        input puzzle 2
+        puzzle 2
       </button>
       <button
-        onClick={() => {
+        className="solver-form-set-puzzle-button"
+        onClick={(e) => {
+          e.preventDefault();
           setCurrentPuzzle(puzzle3);
         }}
       >
-        input puzzle 3
+        puzzle 3
       </button>
-      {/* <input type="text" value={currentPuzzle.join(",")} onChange={() => {}} /> */}
       <input
+        className="solver-form-submit"
         type="submit"
         value="solve!!"
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
           handleSubmit();
         }}
       />

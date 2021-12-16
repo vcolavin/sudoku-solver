@@ -1,0 +1,12 @@
+.solver-form {
+  display: inline-block;
+}
+
+.solver-form-set-puzzle-button {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.solver-form-submit {
+  background-color: green;
+}

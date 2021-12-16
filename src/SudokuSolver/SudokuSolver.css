@@ -1,0 +1,11 @@
+.sudoku-solver-container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sudoku-solver {
+  width: 800px;
+}

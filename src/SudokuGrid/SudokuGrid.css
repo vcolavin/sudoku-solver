@@ -1,14 +1,23 @@
 .sudoku-grid {
-  display: grid;
-  grid-template: repeat(9, 20px);
+  display: inline-grid;
+  grid-template-rows: repeat(9, 20px);
+  grid-template-columns: repeat(9, 20px);
   margin: 0;
   padding: 0;
+  place-items: stretch;
+  background-color: black;
+  outline: 2px solid black;
+  column-gap: 2px;
+  row-gap: 2px;
 }
 
 .sudoku-grid-cell {
-  outline: 1px solid black;
-  place-self: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
 }
