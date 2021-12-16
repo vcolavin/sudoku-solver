@@ -1,0 +1,9 @@
+.sudoku-grid {
+  display: grid;
+  grid-template: repeat(9, 50px);
+}
+
+.sudoku-grid-cell {
+  outline: 1px solid black;
+  place-self: center;
+}
