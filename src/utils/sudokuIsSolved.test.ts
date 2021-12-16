@@ -1,38 +1,16 @@
+import { puzzle1, invalidSudoku, puzzle1solution } from "./data";
 import { sudokuIsSolved } from "./sudokuIsSolved";
-import { Sudoku } from "../types";
-
-// prettier-ignore
-const invalidSudoku: Sudoku = [
-  "1", "2", "3", "4", "5", "6", "7", "8", "9",
-  "1", "2", "3", "4", "5", "6", "7", "8", "9",
-  "1", "2", "3", "4", "5", "6", "7", "8", "9",
-  "1", "2", "3", "4", "5", "6", "7", "8", "9",
-  "1", "2", "3", "4", "5", "6", "7", "8", "9",
-  "1", "2", "3", "4", "5", "6", "7", "8", "9",
-  "1", "2", "3", "4", "5", "6", "7", "8", "9",
-  "1", "2", "3", "4", "5", "6", "7", "8", "9",
-  "1", "2", "3", "4", "5", "6", "7", "8", "9",
-];
-
-// prettier-ignore
-const validSudoku: Sudoku = [
-  "8","4","6","9","3","7","1","5","2",
-  "3","1","9","6","2","5","8","4","7",
-  "7","5","2","1","8","4","9","6","3",
-  "2","8","5","7","1","3","6","9","4",
-  "4","6","3","8","5","9","2","7","1",
-  "9","7","1","2","4","6","3","8","5",
-  "1","2","7","5","9","8","4","3","6",
-  "6","3","8","4","7","1","5","2","9",
-  "5","9","4","3","6","2","7","1","8",
-]
 
 describe("sudokuIsSolved", () => {
   it("can tell if a sudoku is solved", () => {
-    expect(sudokuIsSolved(validSudoku)).toBeTruthy;
+    expect(sudokuIsSolved(puzzle1solution)).toBeTruthy;
   });
 
   it("can tell if a sudoku is not solved", () => {
     expect(sudokuIsSolved(invalidSudoku)).toBeFalsy;
+  });
+
+  it("returns false for incomplete sudoku", () => {
+    expect(sudokuIsSolved(puzzle1)).toBeFalsy;
   });
 });

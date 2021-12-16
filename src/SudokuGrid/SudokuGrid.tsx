@@ -12,7 +12,7 @@ const SudokuGrid = ({ sudoku }: SudokuGridProps) => {
     <ul className="sudoku-grid">
       {sudoku.map((cell, i) => (
         <li className="sudoku-grid-cell" key={i}>
-          {cell}
+          {cell === "x" ? " " : cell}
         </li>
       ))}
     </ul>
