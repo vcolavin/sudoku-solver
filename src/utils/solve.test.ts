@@ -1,27 +1,27 @@
-import { Sudoku } from "../types";
+import {
+  puzzle1,
+  puzzle1solution,
+  puzzle2,
+  puzzle2solution,
+  puzzle3,
+  puzzle3Solution,
+} from "./data";
+import { solve } from "./solve";
 
-// prettier-ignore
-const incompleteSudoku: Sudoku = [
-  "8","x","x","9","3","x","x","x","2",
-  "x","x","9","x","x","x","x","4","x",
-  "7","x","2","1","x","x","9","6","x",
-  "2","x","x","x","x","x","x","9","x",
-  "x","6","x","x","x","x","x","7","x",
-  "x","7","x","x","x","6","x","x","5",
-  "x","2","7","x","x","8","4","x","6",
-  "x","3","x","x","x","x","5","x","x",
-  "5","x","x","x","6","2","x","x","8"
-]
+describe("solver function", () => {
+  it("returns an already solved puzzle", () => {
+    expect(solve(puzzle1solution)).toEqual(puzzle1solution);
+  });
 
-// prettier-ignore
-const incomplete2: Sudoku = [
-  "x","x","4","x","x","x","1","2","x",
-  "x","9","8","x","2","6","3","x","x",
-  "x","3","x","x","9","7","x","x","5",
-  "8","7","1","3","5","4","2","9","x",
-  "x","x","x","x","6","x","x","8","x",
-  "x","5","6","x","x","9","x","x","x",
-  "9","x","5","x","7","x","x","x","2",
-  "x","2","x","x","3","x","x","x","x",
-  "6","8","3","2","x","5","9","x","7"
-]
+  it("solves puzzle1", () => {
+    expect(solve(puzzle1)).toEqual(puzzle1solution);
+  });
+
+  it("solves puzzle2", () => {
+    expect(solve(puzzle2)).toEqual(puzzle2solution);
+  });
+
+  it("solves puzzle3", () => {
+    expect(solve(puzzle3)).toEqual(puzzle3Solution);
+  });
+});
