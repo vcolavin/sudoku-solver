@@ -1,5 +1,6 @@
 import "./SolverForm.css";
-import { solve } from "./solve";
+import { Sudoku } from "../types";
+import { solve } from "../utils/solve";
 
 function SolverForm() {
   return (
@@ -11,7 +12,7 @@ function SolverForm() {
       <input
         type="submit"
         onClick={() => {
-          solve([]);
+          solve([] as any as Sudoku);
         }}
       />
     </form>

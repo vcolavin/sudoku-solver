@@ -1,9 +1,14 @@
 .sudoku-grid {
   display: grid;
-  grid-template: repeat(9, 50px);
+  grid-template: repeat(9, 20px);
+  margin: 0;
+  padding: 0;
 }
 
 .sudoku-grid-cell {
   outline: 1px solid black;
   place-self: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
