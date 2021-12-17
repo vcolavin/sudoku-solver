@@ -15,3 +15,7 @@ You can find them in `src/utils`.
 - [ ] `npm test`. two tests will pass but that's only incidental
 - [ ] fix the tests by writing those functions
 - [ ] make a PR into this repo
+
+## Extra credit
+- [ ] Delete the `SudokuGrid` directory and build a new grid yourself.
+- [ ] Make an interactive grid that the user can solve themself.
