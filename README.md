@@ -14,3 +14,4 @@ You can find them in `src/utils`.
 - [ ] poke around in the code to understand how it's working
 - [ ] `npm test`. two tests will pass but that's only incidental
 - [ ] fix the tests by writing those functions
+- [ ] make a PR into this repo
