@@ -6,7 +6,7 @@ describe("sudokuIsSolved", () => {
     expect(sudokuIsSolved(puzzle1solution)).toBeTruthy();
   });
 
-  it("can tell if a sudoku is not solved", () => {
+  it("returns false for an invalid solution", () => {
     expect(sudokuIsSolved(invalidSudoku)).toBeFalsy();
   });
 
